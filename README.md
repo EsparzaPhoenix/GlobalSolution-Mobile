@@ -1,8 +1,5 @@
 # GlobalSolution-Mobile
 
-Este repositório contém o código-fonte do aplicativo móvel desenvolvido como parte da solução global.
-Estrutura do Projeto
-
 ## Integrantes do Projeto:
 
 * Danielly Pfander Campelo Rodrigues - RM552491
@@ -11,6 +8,9 @@ Estrutura do Projeto
 * Leonardo Oliveira Esparza - RM550200
 * Wellington De Oliveira Urcino Da Silva - RM552368
 
+## Video do Projeto
+
+[Apresentação do projeto](https://youtu.be/FbdJFAGHmV0)
 
 ## O projeto está organizado da seguinte forma:
 
@@ -19,6 +19,7 @@ Estrutura do Projeto
     .gitignore: Arquivo que especifica quais arquivos e diretórios devem ser ignorados pelo Git.
     build.gradle: Script de build do Gradle.
     settings.gradle: Configurações do projeto Gradle.
+
 
 ## Pré-requisitos
 
