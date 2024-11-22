@@ -1,0 +1,37 @@
+=====================================================================
+                      RELATÓRIO DE FALHAS - MIGRAÇÃO PARA FIREBASE REALTIME DATABASE
+=====================================================================
+
+**Projeto:** Innov8Tech - Aplicativo Acadêmico Mobile
+
+**Objetivo da Migração:** 
+A migração do Firebase Storage para o Firebase Realtime Database teve como objetivo a redução de custos. Sendo um projeto acadêmico, enfrentamos limitações orçamentárias, e o modelo de preços do Firebase Storage tornou-se inviável, fazendo com que o Realtime Database fosse uma escolha mais acessível.
+
+---------------------------------------------------------------------
+                              PROBLEMAS ENCONTRADOS
+---------------------------------------------------------------------
+
+1. **Compatibilidade da Estrutura de Dados:**
+   - **Descrição:** Adaptar a estrutura de dados existente do Firebase Storage para o Firebase Realtime Database apresentou desafios significativos. O formato e a estrutura dos dados no Realtime Database exigiram modificações para se alinhar às necessidades do aplicativo.
+   - **Resultado:** Foram necessárias diversas adaptações no código de manipulação de dados para garantir a consistência dos dados em toda a aplicação.
+
+2. **Sincronização em Tempo Real com _reports:**
+   - **Descrição:** Estabelecer uma sincronização confiável entre o Firebase Realtime Database e a variável `_reports` foi um desafio.
+   - **Resultado:** Falhei em manter uma atualização em tempo real dos dados carregados na interface.
+
+3. **Alteração de Padrão de Armazenamento de Dados:**
+   - **Descrição:** Diferente do Firebase Storage, o Realtime Database exige uma estrutura baseada em JSON, o que implica mudanças nos métodos de gravação e leitura.
+   - **Resultado:** As operações de escrita e leitura de relatórios precisaram ser refatoradas para o novo formato, gerando ajustes complexos no código e aumentando o tempo de desenvolvimento.
+
+4. **Exclusão de Arquivos Existentes:**
+   - **Descrição:** Ao mover os dados para o Realtime Database, encontramos dificuldade em excluir ou atualizar dados existentes de forma eficiente, pois o método de exclusão de arquivos no Storage era direto e intuitivo.
+   - **Resultado:** A exclusão de dados antigos ou desatualizados no Realtime Database tornou-se um processo mais trabalhoso, exigindo a manipulação de referências específicas para cada relatório.
+
+5. **Latência e Desempenho:**
+   - **Descrição:** O Firebase Realtime Database apresentou latência na leitura e gravação dos dados, especialmente em consultas simultâneas, o que impactou a experiência do usuário.
+   - **Resultado:** O tempo de carregamento das informações no dashboard foi impactado, tornando a interface menos responsiva em comparação com o uso anterior do Storage.
+
+6. **Ajustes de Permissões e Segurança:**
+   - **Descrição:** A configuração das regras de segurança no Realtime Database para garantir que apenas usuários autenticados pudessem acessar e manipular os relatórios foi desafiadora.
+   - **Resultado:** A implementação das regras de segurança foi complexa e exigiu diversas tentativas para alinhar o controle de acesso com as necessidades do projeto.
+

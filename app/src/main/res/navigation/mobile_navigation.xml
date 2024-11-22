@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="br.com.fiap.solartech.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_home_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="br.com.fiap.solartech.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_reportDetailsFragment"
+            app:destination="@id/pedidoDetailsFragment">
+            <argument
+                android:name="twitterHandle"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/pedidoDetailsFragment"
+        android:name="br.com.fiap.solartech.ui.dashboard.PedidoDetailsFragment"
+        android:label="Detalhes do Pedido"
+        tools:layout="@layout/fragment_pedido_details" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="br.com.fiap.solartech.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.fiap.solartech.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_forgotpass"
+            app:destination="@id/forgotPassFragment" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="br.com.fiap.solartech.ui.register.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPassFragment"
+        android:name="br.com.fiap.solartech.ui.forgotpass.ForgotPassFragment"
+        android:label="Recuperar Senha"
+        tools:layout="@layout/fragment_forgot_pass" />
+
+</navigation>

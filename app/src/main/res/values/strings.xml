@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SolarTech</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="details_button_text">Ver Detalhes</string>
+    <string name="delete_button_text">Excluir Pedido</string>
+</resources>

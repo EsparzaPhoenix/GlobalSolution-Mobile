@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores principais -->
+    <color name="colorPrimary">#388E3C</color> <!-- Verde principal -->
+    <color name="colorPrimaryDark">#2E7D32</color> <!-- Verde escuro -->
+    <color name="colorAccent">#8BC34A</color> <!-- Verde claro -->
+
+    <!-- Cores adicionais -->
+    <color name="colorBackground">#F1F8E9</color> <!-- Fundo claro -->
+    <color name="colorTextPrimary">#2C3E50</color> <!-- Texto principal -->
+    <color name="colorTextSecondary">#4CAF50</color> <!-- Texto secundário -->
+    <color name="colorButton">#66BB6A</color> <!-- Botões -->
+    <color name="colorOnSecondary">#FFFFFF</color> <!-- Texto sobre botões -->
+</resources>
