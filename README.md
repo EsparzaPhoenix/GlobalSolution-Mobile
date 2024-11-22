@@ -5,6 +5,7 @@ Estrutura do Projeto
 
 ## Integrantes do Projeto:
 
+* Danielly Pfander Campelo Rodrigues - RM552491
 * Flavio Sousa Vasconcelos - RM552421 
 * João Carlos França Figueiredo - RM97887 
 * Leonardo Oliveira Esparza - RM550200
